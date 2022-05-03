@@ -1,0 +1,27 @@
+partition( array, left, right)
+    first = array[left]
+    k = left
+    for m = left + 1 to right
+        if array[j] < first
+            k = k + 1
+            swap(array[k], array[m])
+    swap(array[k], array[left])
+    return k
+
+quickSort( array, left, right)
+    if left >= right return
+    else
+        middle = partition(array, left, right)
+        quickSort(array, left, middle-1)
+        quickSort(array, middle + 1, right)
+
+
+
+
+[1,2,3,4,5,6]
+
+1st recursion
+[1,2,3,4]
+
+2nd recursion
+[2,3,4]
